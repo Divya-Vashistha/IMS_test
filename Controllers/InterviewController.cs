@@ -15,6 +15,13 @@ namespace IMS_New.Controllers
         {
             dbContext = new ApplicationDbContext();
         }
+        [HttpPost]
+        [Route("api/interview/PostInterview")]
+        public object postInterview()
+        {
+
+            return null;
+        }
 
     }
 }

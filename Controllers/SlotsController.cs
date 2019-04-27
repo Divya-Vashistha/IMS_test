@@ -17,7 +17,7 @@ namespace IMS_New.Controllers
         }
 
         [HttpPost]
-        [Route("api/Interview/PostSlots")]
+        [Route("api/slots/PostSlots")]
         public object PostSlots(GetSlots getSlots)
         {
 
