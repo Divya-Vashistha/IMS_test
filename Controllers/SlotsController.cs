@@ -10,6 +10,8 @@ namespace IMS_New.Controllers
 {
     public class SlotsController : ApiController
     {
+        InterviewController interview = new InterviewController();
+
         public ApplicationDbContext dbContext;
         public SlotsController()
         {
@@ -20,7 +22,21 @@ namespace IMS_New.Controllers
         [Route("api/slots/PostSlots")]
         public object PostSlots(GetSlots getSlots)
         {
+           
+            var slot = new Slots() {
 
+                dayOfWeek=getSlots.start.DayOfWeek.ToString(),
+                endDate=getSlots.end.Date,
+                endTime=getSlots.end.AddSeconds(-getSlots.end.TimeOfDay.Seconds).TimeOfDay,
+                recurringType=getSlots.recurringType,
+                panelId=getSlots.panelId,
+                startDate=getSlots.start.Date,
+                startTime=getSlots.start.AddSeconds(-getSlots.start.TimeOfDay.Seconds).TimeOfDay
+               
+            };
+            slot.isRecurring = getSlots.recurringType != null;
+            dbContext.Slots.Add(slot);
+            dbContext.SaveChanges();
             return "";
         }
     }
