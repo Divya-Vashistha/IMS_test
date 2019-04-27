@@ -11,10 +11,9 @@ namespace IMS_New.Models
     {
         [Key]
         public int slotId { get; set; }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
-        public TimeSpan startTime { get; set; }
-        public TimeSpan endTime { get; set; }
+        public DateTime start { get; set; }
+        public DateTime end { get; set; }
+        
         public bool isRecurring { get; set; }
         public string recurringType { get; set; }
         public string dayOfWeek { get; set; }
@@ -28,18 +27,11 @@ namespace IMS_New.Models
         public Slots slots { get; set; }
         [ForeignKey("slots")]
         public int slotId { get; set; }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
-        public TimeSpan startTime { get; set; }
-        public TimeSpan endTime { get; set; }
+        public DateTime start { get; set; }
+        public DateTime end { get; set; }
+    
         public string status { get; set; }
     }
 
-    public class GetSlots
-    {
-        public DateTime start { get; set; }
-        public DateTime end { get; set; }
-        public string recurringType { get; set; }
-        public string panelId { get; set; }
-    }
+ 
 }

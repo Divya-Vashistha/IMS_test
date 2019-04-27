@@ -22,12 +22,14 @@ namespace IMS_New.Controllers
         [Route("api/slots/PostSlots")]
         public object PostSlots(GetSlots getSlots)
         {
+            var oldSlot=dbContext.Slots.Where(c=>c.panelId==getSlots.panelId 
+                        && c.)
            
             var slot = new Slots() {
 
                 dayOfWeek=getSlots.start.DayOfWeek.ToString(),
                 endDate=getSlots.end.Date,
-                endTime=getSlots.end.AddSeconds(-getSlots.end.TimeOfDay.Seconds).TimeOfDay,
+                endTime=getSlots.end.AddSeconds(-getSlots.end.TimeOfDay.Seconds),
                 recurringType=getSlots.recurringType,
                 panelId=getSlots.panelId,
                 startDate=getSlots.start.Date,
