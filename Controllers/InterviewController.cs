@@ -16,12 +16,5 @@ namespace IMS_New.Controllers
             dbContext = new ApplicationDbContext();
         }
 
-        [HttpPost]
-        [Route("api/Interview/PostSlots")]
-        public object PostSlots(GetSlots getSlots)
-        {
-
-            return "";
-        }
     }
 }
