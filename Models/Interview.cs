@@ -14,13 +14,21 @@ namespace IMS_New.Models
         public Guid interviewGuid { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public DateTime startTime { get; set; }
-        public DateTime endTime { get; set; }
+        public TimeSpan startTime { get; set; }
+        public TimeSpan endTime { get; set; }
         public Slots slots { get; set; }
         [ForeignKey("slots")]
         public int slotId { get; set; }
         public string panelId { get; set; }
         public string panelType { get; set; }
 
+    }
+    public class setInterview {
+
+        public string panelid  { get; set; }
+        public DateTime  stime { get; set; }
+        public DateTime  etime { get; set; }
+        public int slotId { get; set; }
+        public string panelType  { get; set; }
     }
 }

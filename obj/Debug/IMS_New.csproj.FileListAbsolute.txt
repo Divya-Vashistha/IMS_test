@@ -188,3 +188,4 @@ C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.csproj.CoreCompileIn
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.csproj.CopyComplete
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.dll
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.pdb
+C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.Migrations.changetmevalue.resources

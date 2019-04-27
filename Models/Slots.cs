@@ -13,8 +13,8 @@ namespace IMS_New.Models
         public int slotId { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public DateTime startTime { get; set; }
-        public DateTime endTime { get; set; }
+        public TimeSpan startTime { get; set; }
+        public TimeSpan endTime { get; set; }
         public bool isRecurring { get; set; }
         public string recurringType { get; set; }
         public string dayOfWeek { get; set; }
@@ -30,8 +30,8 @@ namespace IMS_New.Models
         public int slotId { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public DateTime startTime { get; set; }
-        public DateTime endTime { get; set; }
+        public TimeSpan startTime { get; set; }
+        public TimeSpan endTime { get; set; }
         public string status { get; set; }
     }
 

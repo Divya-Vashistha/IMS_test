@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201904270607066_SlotExceptionModel.Designer.cs">
       <DependentUpon>201904270607066_SlotExceptionModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904270800237_change tme value.cs" />
+    <Compile Include="Migrations\201904270800237_change tme value.Designer.cs">
+      <DependentUpon>201904270800237_change tme value.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Interview.cs" />
@@ -291,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904270607066_SlotExceptionModel.resx">
       <DependentUpon>201904270607066_SlotExceptionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904270800237_change tme value.resx">
+      <DependentUpon>201904270800237_change tme value.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
