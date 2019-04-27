@@ -25,10 +25,19 @@ namespace IMS_New.Models
     }
     public class setInterview {
 
-        public string panelid  { get; set; }
-        public DateTime  stime { get; set; }
-        public DateTime  etime { get; set; }
+        public string panelid { get; set; }
+        public DateTime stime { get; set; }
+        public DateTime etime { get; set; }
         public int slotId { get; set; }
-        public string panelType  { get; set; }
+        public string panelType { get; set; }
+    }
+    public class SendException {
+
+
+        public DateTime stime { get; set; }
+        public DateTime etime { get; set; }
+        public int slotId { get; set; }
+        public string status { get; set; }
+     
     }
 }
