@@ -17,39 +17,17 @@ namespace IMS_New.Controllers
         }
         [HttpPost]
         [Route("api/interview/PostInterview")]
-        public object postInterview(setInterview data)
+        public object postInterview(Interview data)
         {
-            var guid = Guid.NewGuid();
-            var interiew = new Interview() {
-
-                endDate=data.etime.Date,
-               endTime=data.etime.AddSeconds(-data.etime.TimeOfDay.Seconds).TimeOfDay,
-                interviewGuid=guid,
-                panelId=data.panelid,
-                panelType=data.panelType,
-                slotId=data.slotId,
-                startDate=data.stime.Date,
-                startTime=data.stime.AddSeconds(-data.stime.TimeOfDay.Seconds).TimeOfDay
-            };
-
-            dbContext.Interview.Add(interiew);
+            data.interviewGuid = Guid.NewGuid();
+            dbContext.Interview.Add(data);
             dbContext.SaveChanges();
-            var exception = new SendException() { etime=data.etime,slotId=data.slotId,status="book",stime=data.stime};
-            postExceptioin(exception);
            
             return null;
         }
-        public object postExceptioin(SendException data)
+        public object postExceptioin(SlotException data)
         {
-            var exception = new SlotException() {
-
-                endDate=data.etime.Date,
-                endTime =data.etime.AddSeconds(-data.etime.TimeOfDay.Seconds).TimeOfDay,
-                slotId=data.slotId,
-                startDate=data.stime.Date,
-                startTime=data.stime.AddSeconds(-data.stime.TimeOfDay.Seconds).TimeOfDay,
-                status=data.status
-            };
+           
 
             return null;
         }

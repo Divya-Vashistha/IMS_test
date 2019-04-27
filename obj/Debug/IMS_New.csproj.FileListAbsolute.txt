@@ -191,3 +191,4 @@ C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.pdb
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.Migrations.changetmevalue.resources
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\bin\Swashbuckle.Core.dll
 C:\Users\NINELEAPS\Desktop\sample\IMS_New\bin\WebActivatorEx.dll
+C:\Users\NINELEAPS\Desktop\sample\IMS_New\obj\Debug\IMS_New.Migrations.asdsad.resources
