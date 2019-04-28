@@ -19,10 +19,27 @@ namespace IMS_New.Controllers
         }
 
         [HttpPost]
-        [Route("api/slots/PostSlots")]
-        public object PostSlots(Slots getSlots)
+        [Route("api/slots/PublishSlots")]
+        public object PublishSlots(Slots getSlots)
         {
-            return null;
+            try
+            {
+                var slot = dbContext.Slots.Where(s => s.panelId == getSlots.panelId &&
+                                ((getSlots.start <= s.start && getSlots.end >= s.start) ||
+                                    (getSlots.start <= s.end && getSlots.end >= s.end) ||
+                                        (getSlots.start >= s.start && getSlots.end <= s.end))).ToList();
+                    if (slot.Count() > 0)
+                    return "overlapping";
+                getSlots.dayOfWeek = getSlots.start.Date.DayOfWeek.ToString();
+                getSlots.isRecurring = getSlots.recurringType != null;
+                dbContext.Slots.Add(getSlots);
+                dbContext.SaveChanges();
+                return "done";
+            }
+            catch (Exception exception)
+            {
+                return exception.Message;
+            }
         }
     }
 }
