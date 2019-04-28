@@ -22,15 +22,17 @@ namespace IMS_New.Controllers
             data.interviewGuid = Guid.NewGuid();
             dbContext.Interview.Add(data);
             dbContext.SaveChanges();
-           
-            return null;
-        }
-        public object postExceptioin(SlotException data)
-        {
-           
 
+            
+            var exception = new SlotException() {
+            end=data.end,
+            start=data.start,
+            slotId=data.slotId,
+            status="booked"
+            };
             return null;
         }
+       
 
     }
 }
