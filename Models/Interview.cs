@@ -18,7 +18,7 @@ namespace IMS_New.Models
         [ForeignKey("slots")]
         public int slotId { get; set; }
         public string panelId { get; set; }
-        public string panelType { get; set; }
+        public bool isPrimaryPanel { get; set; }
 
     }
    

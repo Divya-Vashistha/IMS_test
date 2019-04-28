@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201904271037519_asdsad.Designer.cs">
       <DependentUpon>201904271037519_asdsad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904280745277_changeInterview.cs" />
+    <Compile Include="Migrations\201904280745277_changeInterview.Designer.cs">
+      <DependentUpon>201904280745277_changeInterview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Interview.cs" />
@@ -312,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904271037519_asdsad.resx">
       <DependentUpon>201904271037519_asdsad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904280745277_changeInterview.resx">
+      <DependentUpon>201904280745277_changeInterview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -11,6 +11,12 @@ namespace IMS_New.Controllers
     public class InterviewController : ApiController
     {
         public ApplicationDbContext dbContext;
+
+        public static DateTime removeSec(DateTime time)
+        {
+            return time.AddSeconds(-time.TimeOfDay.Seconds);
+        }
+
         public InterviewController()
         {
             dbContext = new ApplicationDbContext();
@@ -19,9 +25,12 @@ namespace IMS_New.Controllers
         [Route("api/interview/PostInterview")]
         public object postInterview(Interview data)
         {
+
+            data.end = removeSec(data.end);
+            data.start = removeSec(data.start);
             data.interviewGuid = Guid.NewGuid();
             dbContext.Interview.Add(data);
-            dbContext.SaveChanges();
+          
 
             
             var exception = new SlotException() {
@@ -30,6 +39,8 @@ namespace IMS_New.Controllers
             slotId=data.slotId,
             status="booked"
             };
+            dbContext.SlotException.Add(exception);
+            dbContext.SaveChanges();
             return null;
         }
        
